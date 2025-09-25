@@ -1,12 +1,11 @@
-.container {
+main {
   background-color: rgb(0, 11, 24);
   display: grid;
-  min-height: 100vh;
   grid-template-columns: 2fr 8fr 1fr;
   grid-template-rows: .5fr 20fr 1fr;
   grid-template-areas:
     "header header header"
-    "aside main main"
+    "main main main"
     "footer footer footer"
 }
 
@@ -31,7 +30,7 @@
   gap: 2rem;
   justify-content: center;
   margin-right: 3rem;
-  background-color: rgb(1, 5, 54);
+  background-color: rgba(1, 5, 54, 0.479);
 }
 
 .header a {
@@ -42,53 +41,44 @@
   border-radius: 6px;
   text-decoration: none;
 }
+
 .header a:hover {
 background: navy;
 }
 
-.container main {
-  border: 1px solid white;
+.contenido {
   grid-area: main;
+  display: grid;
+  padding: 1rem;
+  background-color: rgb(117, 112, 37);
+  grid-auto-rows: minmax(auto, 95vh);
+  gap: 5vh;
 }
 
-.container aside {
-  border: 1px solid red;
-  grid-area: aside;
+section {
+  background-color: rgba(1, 5, 54, 0.363);
+  backdrop-filter: blur(100);
 }
+
+.presentacion {
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  color: rgb(255, 255, 255);
+}
+
+.presentacion ul {
+  display: flex;
+  gap: 1rem;
+  list-style: circle
+}
+
 
 .container footer {
-  border: 1px solid rgb(150, 221, 182);
   grid-area: footer;
 }
 
 
-
-
-.asidebar header {
-  text-align: center;
-  font-weight: bold;
-  font-size: 1.2rem;
-  margin-top: 1rem;
-}
-
-
-.asidebar li {
-  border: 1px solid black;
-  grid-area: aside;
-  background-color: rgb(200, 200, 200);
-  padding: 1rem;
-  margin: 1rem;
-  border-radius: 8px;
-}
-
-.main {
-  padding: 2rem;
-  background-color: rgb(220, 220, 220);
-  overflow-y: auto;
-}
-.main video, .main iframe {
-  display: block;
-  margin: 2rem auto;
-  max-width: 90%;
-  border-radius: 8px;
-}
