@@ -20,7 +20,6 @@ function App() {
   
 
   return (
-    <main>
       <Suspense fallback={<h1>Cargando...</h1>}>
         <Router routes={appRoutes} defaultComponent={lazyPage404}>
           <Route path='/' Component={lazyHomePage} />
@@ -28,7 +27,6 @@ function App() {
           <Route path='/proyects' Component={lazyProyectPage} />
         </Router>
       </Suspense>
-    </main>
   )
 }
 

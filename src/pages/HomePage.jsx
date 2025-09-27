@@ -2,34 +2,34 @@ import { Link } from "../Link"
 
 export default function HomePage() {
   return (
-    <>
+    <div className="container">
       <header className="header">
-          imagen
+          <h1>@Roweshil</h1>
           <nav >
-              <Link to='/'>Home</Link>
-              <Link to='/about'>Ir a Acerca mi</Link> 
-              <Link to='/proyects'>Proyectos</Link> 
+              <a to='/'>Home</a>
+              <a to='/about'>Proyectos</a> 
+              <a to='/proyects'>Acerca de mi</a> 
           </nav>
 
       </header>
-      <section className="contenido">
+      <section className="viewport">
         <section className="presentacion">
             <article>
                 <h3>FullStack Developer</h3>
-                <h1><strong>J. Andres Garcia Vargas</strong></h1>
+                <h1><strong>Andres Garcia</strong></h1>
                 <nav>
                     <a 
                         href="https://github.com/Roweshil"
                         target="_blank"
                         rel="noreferrer"
                     > 
-                        <img width="40" height="40" src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" /> ↗</a>
+                        <img  src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" /> ↗</a>
                     <a 
                         href="https://www.linkedin.com/in/roweshil"
                         target="_blank"
                         rel="noreferrer"
 
-                    > <img width="40" height="40" src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="" /> ↗</a>
+                    > <img  src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="" /> ↗</a>
                     <a 
                         href="https://github.com/Roweshil"
                         target="_blank"
@@ -75,7 +75,7 @@ export default function HomePage() {
               </article>
           </section>
 
-          <section className="About">
+          <section className="content">
             
             <header>
                 <span>Mis tecnologías</span>
@@ -194,8 +194,7 @@ export default function HomePage() {
               </form>
           </section>
       </section>
-      <footer>
-          El mejor Portfolio
+      <footer className="footer">
           
           <a href="mailto:roweshil@gmail.com">Enviame un correo</a>
           <a href="tel:+5554565789">Llamar por telefono</a>
@@ -204,6 +203,6 @@ export default function HomePage() {
       
       </footer>
       
-    </>
+    </div>
   )
 }
